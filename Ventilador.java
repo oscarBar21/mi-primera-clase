@@ -44,7 +44,14 @@ public class Ventilador{
     
     public String getEstado(){
         String estado;
-        estado = ("Marca " +  marca  + " | Potencia " +  potenciaVentilador  + " | Encendido " + encendido);
+        String ventiladorEncendido;
+        if(encendido == true){
+            ventiladorEncendido = "si";
+        }
+        else{
+            ventiladorEncendido = "no";
+        }
+        estado = ("Marca " +  marca  + " | Potencia " +  potenciaVentilador  + " | Encendido " + ventiladorEncendido);
         return estado;
     }
 }
